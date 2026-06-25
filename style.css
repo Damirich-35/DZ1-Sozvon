@@ -1,3 +1,24 @@
+
+/* Подключаем обычный шрифт */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.woff') format('woff');
+  font-weight: 100 900; /* Поддержка любой жирности */
+  font-style: normal;
+}
+
+/* Подключаем курсивный шрифт (если он понадобится) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Italic.woff') format('woff');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+/* Применяем шрифт ко всему сайту */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 .products-container {
   display: flex;
   flex-wrap: wrap;
@@ -10,8 +31,10 @@
   border-radius: 8px;
   width: 300px;
   box-sizing: border-box;
+  /* Включаем flexbox внутри карточки */
+  display: flex;
+  flex-direction: column; /* Элементы будут идти строго сверху вниз */
 }
-
 .product-card__image-bg {
   background-color: #f7f7f7; 
   padding: 20px;
@@ -48,4 +71,14 @@
   font-size: 14px;
   color: #666666;
   margin-bottom: 16px;
+}
+.product-card__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+  padding: 20px; 
+}
+
+.product-card__footer {
+  margin-top: auto; 
 }
