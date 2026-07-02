@@ -12,110 +12,131 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Выбери свой продукт</h1>
 
-  <h1>Выбери свой продукт</h1>
-
+  <!-- 1. ГЛАВНЫЙ КОНТЕЙНЕР (отвечает за сетку и внешние отступы между карточками) -->
   <div class="products-container">
 
-    <!-- Карточка 1 (Гель для умывания) -->
-    <div class="product-card">
-      <div class="product-card__image-bg">
-        <img src="img/fase-wash-gel.jpg" alt="Гель для умывания" class="product-card__img" />
+    <!-- КАРТОЧКА 1: Гель для умывания -->
+    <article class="product-card">
+      <div class="product-card__image-wrapper">
+        <img src="img/fase-wash-gel.jpg" alt="Гель для умывания" class="product-card__image">
       </div>
-      <div class="product-card__content">
-        <p class="product-card__category">для нормальной кожи</p>
+      <div class="product-card__body">
+        <span class="product-card__category">для нормальной кожи</span>
         <h2 class="product-card__title">Гель для умывания</h2>
-        <p class="product-card__text">Интенсивно очищает, не повреждает защитный барьер кожи.</p>
-        
+        <p class="product-card__description">Интенсивно очищает, не повреждает защитный барьер кожи.</p>
         <div class="product-card__ingredients">
-          <span class="product-card__ingredients-title">состав:</span>
-          <ul>
-            <li>минералы</li>
-            <li>витамины С, А, PP, B и E</li>
-            <li>солнцезащитные компоненты</li>
+          <h4 class="product-card__ingredients-title">состав:</h4>
+          <ul class="product-card__ingredients-list">
+            <li class="product-card__ingredients-item">минералы</li>
+            <li class="product-card__ingredients-item">витамины С, А, PP, B и E</li>
+            <li class="product-card__ingredients-item">солнцезащитные компоненты</li>
           </ul>
         </div>
-        
         <div class="product-card__footer">
-          <span class="product-card__price-title">Цена</span>
-          <span class="product-card__price-value">1 650 &#8381;</span>
+          <span class="product-card__price-label">Цена</span>
+          <span class="product-card__price-value">1 650 ₽</span>
         </div>
       </div>
-    </div>
-    <!-- Карточка 2 (Увлажняющая маска) -->
-    <div class="product-card">
-      <div class="product-card__image-bg">
-        <img src="img/mask.jpg" alt="Увлажняющая маска" class="product-card__img" />
+    </article>
+
+    <!-- КАРТОЧКА 2: Увлажняющая маска -->
+    <article class="product-card">
+      <div class="product-card__image-wrapper">
+        <img src="img/mask.jpg" alt="Увлажняющая маска" class="product-card__image">
       </div>
-      <div class="product-card__content">
-        <p class="product-card__category">для сухого типа</p>
+      <div class="product-card__body">
+        <span class="product-card__category">для сухого типа</span>
         <h2 class="product-card__title">Увлажняющая маска</h2>
-        <p class="product-card__text">Способствует удерживанию влаги в верхних слоях кожи..</p>
-        
+        <p class="product-card__description">Способствует удерживанию влаги в верхних слоях кожи.</p>
         <div class="product-card__ingredients">
-          <span class="product-card__ingredients-title">состав:</span>
-          <ul>
-            <li>воски</li>
-            <li>минералы</li>
-            <li>масла</li>
+          <h4 class="product-card__ingredients-title">состав:</h4>
+          <ul class="product-card__ingredients-list">
+            <li class="product-card__ingredients-item">воски</li>
+            <li class="product-card__ingredients-item">минералы</li>
+            <li class="product-card__ingredients-item">масла</li>
           </ul>
         </div>
-        
         <div class="product-card__footer">
-          <span class="product-card__price-title">Цена</span>
-          <span class="product-card__price-value">3 500 &#8381;</span>
+          <span class="product-card__price-label">Цена</span>
+          <span class="product-card__price-value">3 500 ₽</span>
         </div>
       </div>
-    </div>
-    <!-- Карточка 3 (Подарочный набор №1) -->
-    <div class="product-card">
-      <div class="product-card__image-bg">
-        <img src="img/set-1.jpg" alt="Подарочный набор №1" class="product-card__img" />
+    </article>
+
+    <!-- КАРТОЧКА 3: Подарочный набор №1 -->
+    <article class="product-card">
+      <div class="product-card__image-wrapper">
+        <img src="img/set-1.jpg" alt="Подарочный набор №1" class="product-card__image">
       </div>
-      <div class="product-card__content">
-        <p class="product-card__category">Набор</p>
+      <div class="product-card__body">
+        <span class="product-card__category">набор</span>
         <h2 class="product-card__title">Подарочный набор №1</h2>
-        <p class="product-card__text">Набор, состоящий из увлажняющего крема и маски.</p>
+        <p class="product-card__description">Набор, состоящий из увлажняющего крема и маски.</p>
         <div class="product-card__ingredients">
-          <span class="product-card__ingredients-title">состав:</span>
-          <ul>
-            <li>воски</li>
-            <li>минералы</li>
-            <li>масла</li>
+          <h4 class="product-card__ingredients-title">состав:</h4>
+          <ul class="product-card__ingredients-list">
+            <li class="product-card__ingredients-item">воски</li>
+            <li class="product-card__ingredients-item">минералы</li>
+            <li class="product-card__ingredients-item">масла</li>
           </ul>
         </div>
-        
         <div class="product-card__footer">
-          <span class="product-card__price-title">Цена</span>
-          <span class="product-card__price-value">4 750 &#8381;</span>
+          <span class="product-card__price-label">Цена</span>
+          <span class="product-card__price-value">4 750 ₽</span>
         </div>
       </div>
-    </div>
-    <!-- Карточка 4 (Подарочный набор №5) -->
-    <div class="product-card">
-      <div class="product-card__image-bg">
-        <img src="img/set-5.jpg" alt="Подарочный набор №5" class="product-card__img" />
+    </article>
+
+    <!-- КАРТОЧКА 4: Подарочный набор №5 -->
+    <article class="product-card">
+      <div class="product-card__image-wrapper">
+        <img src="img/set-5.jpg" alt="Подарочный набор №5" class="product-card__image">
       </div>
-      <div class="product-card__content">
-        <p class="product-card__category">Весь набор средств Invisible symphony: крем, маска, мусс и гель для умывания.</p>
+      <div class="product-card__body">
+        <span class="product-card__category">набор</span>
         <h2 class="product-card__title">Подарочный набор №5</h2>
-        <p class="product-card__text">Способствует удерживанию влаги в верхних слоях кожи..</p>
-        
+        <p class="product-card__description">Весь набор средств Invisible symphony: крем, маска, мусс и гель для умывания.</p>
         <div class="product-card__ingredients">
-          <span class="product-card__ingredients-title">состав:</span>
-          <ul>
-            <li>воски</li>
-            <li>минералы</li>
-            <li>масла</li>
+          <h4 class="product-card__ingredients-title">состав:</h4>
+          <ul class="product-card__ingredients-list">
+            <li class="product-card__ingredients-item">воски</li>
+            <li class="product-card__ingredients-item">минералы</li>
+            <li class="product-card__ingredients-item">масла</li>
           </ul>
         </div>
-        
         <div class="product-card__footer">
-          <span class="product-card__price-title">Цена</span>
-          <span class="product-card__price-value">7 520 &#8381;</span>
+          <span class="product-card__price-label">Цена</span>
+          <span class="product-card__price-value">7 520 ₽</span>
         </div>
       </div>
-    </div>
+    </article>
+
+    <!-- КАРТОЧКА 5: Тоник для лица -->
+    <article class="product-card">
+      <div class="product-card__image-wrapper">
+        <img src="img/mask.jpg" alt="Тоник для лица" class="product-card__image">
+      </div>
+      <div class="product-card__body">
+        <span class="product-card__category">для всех типов</span>
+        <h2 class="product-card__title">Тоник для лица</h2>
+        <p class="product-card__description">Освежает, тонизирует и выравнивает pH-баланс кожи.</p>
+        <div class="product-card__ingredients">
+          <h4 class="product-card__ingredients-title">состав:</h4>
+          <ul class="product-card__ingredients-list">
+            <li class="product-card__ingredients-item">минералы</li>
+            <li class="product-card__ingredients-item">экстракты трав</li>
+          </ul>
+        </div>
+        <div class="product-card__footer">
+          <span class="product-card__price-label">Цена</span>
+          <span class="product-card__price-value">2 100 ₽</span>
+        </div>
+      </div>
+    </article>
+
   </div>
+
 </body>
 </html>
