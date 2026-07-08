@@ -1,0 +1,115 @@
+/* Подключаем обычный шрифт */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.woff') format('woff');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Применяем шрифт ко всему сайту и задаем цвет заднего фона */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f6f9; /* Мягкий цвет фона по макету */
+  margin: 0;
+  padding: 40px 0;
+}
+
+/* РОДИТЕЛЬСКИЙ КОНТЕЙНЕР (управляет только сеткой и внешними отступами) */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Внешние отступы между карточками по статье об отступах */
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* БЛОК КАРТОЧКИ (независимый компонент, задает размеры и скругления) */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Скрывает острые углы серого фона у картинок */
+  box-sizing: border-box;
+}
+
+/* ЭЛЕМЕНТ: Обёртка картинки с серым фоном */
+.product-card__image-wrapper {
+  background-color: #f7f7f7;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card__image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ЭЛЕМЕНТ: Контентная часть (Здесь находятся все внутренние отступы padding по вебинару!) */
+.product-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Растягивает блок, чтобы футер прижался к низу */
+  padding: 24px; /* Внутренний отступ для текстов от краев карточки */
+}
+
+/* Оформление текстов и их отступы вниз */
+.product-card__category {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #b0b0b0;
+  margin-bottom: 8px;
+}
+
+.product-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin: 0 0 12px 0;
+}
+
+.product-card__description {
+  font-size: 14px;
+  color: #666666;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+/* Списки состава */
+.product-card__ingredients-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1A1A1A;
+  margin: 0 0 6px 0;
+}
+
+.product-card__ingredients-list {
+  padding-left: 20px;
+  margin: 0 0 24px 0;
+}
+
+.product-card__ingredients-item {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* ФУТЕР КАРТОЧКИ (прижимается к низу благодаря margin-top: auto) */
+.product-card__footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #EAEAEA;
+  padding-top: 16px;
+}
+
+.product-card__price-label,
+.product-card__price-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
