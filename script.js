@@ -1,24 +1,28 @@
-// ЗАДАЧА 3
-const allCards = document.querySelectorAll('.product-card');
+// ЗАДАЧА 2
+const singleProductCard = document.querySelector('.product-card');
+singleProductCard.style.border = '2px solid red'; 
 
-allCards.forEach(function(card) {
-  card.style.backgroundColor = '#e1f5fe';
+// ЗАДАЧА 3
+const itemsCollection = document.querySelectorAll('.product-card');
+itemsCollection.forEach(function(item) {
+  item.style.backgroundColor = '#e1f5fe';
 });
+
+// ЗАДАЧА 4
+// window.location.href = 'https://google.com';
 
 // ЗАДАЧА 5
 console.log('Скрипт успешно запущен, карточки перекрашены!');
 alert('JavaScript работает! Нажмите ОК, чтобы увидеть карточки.');
 
 // ЗАДАЧА 6
-const mainTitle = document.querySelector('h1');
-
-mainTitle.addEventListener('mouseenter', function() {
-  console.log(mainTitle.textContent);
+const pageMainHeading = document.querySelector('h1');
+pageMainHeading.addEventListener('mouseenter', function() {
+  console.log(pageMainHeading.textContent);
 });
 
 // ЗАДАЧА 7
-const myButton = document.querySelector('.toggle-btn');
-
-myButton.addEventListener('click', function() {
-  myButton.classList.toggle('toggle-btn--active');
+const colorSwitcherBtn = document.querySelector('.toggle-btn');
+colorSwitcherBtn.addEventListener('click', function() {
+  colorSwitcherBtn.classList.toggle('toggle-btn--active');
 });
