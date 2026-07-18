@@ -20,20 +20,20 @@ function checkMovementSpeed(currentSpeed) {
 checkMovementSpeed(1500); // Выведет: Субсветовая скорость
 // ЗАДАЧА 5
 const storeProductTitle = 'Гель для умывания Invisible Symphony';
-const storeProductPrice = 1650; // Цена в рублях (или условных единицах)
+const storeProductPrice = 1650;
 
-function tryToPurchaseProduct(userCurrentBudget) {
+function purchaseProduct(userCurrentBudget) {
   if (userCurrentBudget >= storeProductPrice) {
     console.log(`${storeProductTitle} приобретён. Спасибо за покупку!`);
   } else {
-    // Обсчитываем разницу, сколько пользователю не хватает
     const cashDeficit = storeProductPrice - userCurrentBudget;
     console.log(`Вам не хватает ${cashDeficit}$, пополните баланс`);
   }
 }
 
-// Пример вызова функции для проверки:
-tryToPurchaseProduct(1000); 
+// Пример вызова функции (обновите имя и здесь):
+purchaseProduct(1000);
+
 // ЗАДАЧА 6 (Произвольная функция с адекватным именем)
 function calculateLoyaltyDiscount(totalOrderSum, userDiscountPercent) {
   const finalDiscountAmount = (totalOrderSum * userDiscountPercent) / 100;
