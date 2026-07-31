@@ -55,7 +55,7 @@ const cyberneticUniverseBooks = [
 const unifiedLibraryCollection = [...classicSciFiBooks, ...cyberneticUniverseBooks];
 
 // TASK 10: Transforming array using map method to identify rare items
-function tagRareMediaItems(booksArray) {
+function getProcessedBooks(booksArray) {
   const processedCollection = booksArray.map(function(book) {
        const updatedBook = { ...book };
     
