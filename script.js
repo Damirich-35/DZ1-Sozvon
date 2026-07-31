@@ -28,3 +28,4 @@ const creativeColorBtn = document.querySelector('.toggle-btn');
 creativeColorBtn.addEventListener('click', function() {
   creativeColorBtn.classList.toggle('toggle-btn--active');
 });
+console.log(unifiedLibraryCollection);
