@@ -1,6 +1,6 @@
 import { socialMediaComments } from './comments.js'; 
 // TASK 2: Filter array of numbers starting from 5
-const initialNumbersSequence =[1,2,3,4,5,6,7,8,9,10]
+const initialNumbersSequence =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const filteredNumbersSequence = initialNumbersSequence.filter(number => number >= 5);
 
 // TASK 3:
