@@ -1,10 +1,10 @@
 import { socialMediaComments } from './comments.js'; 
 // TASK 2: Filter array of numbers starting from 5
-const initialNumbersSequence =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const filteredNumbersSequence = initialNumbersSequence.filter(number => number >= 5);
+const Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const filtered = Numbers.filter(number => number >= 5);
 
 // TASK 3:
-const kitchenAppliancesList = [
+const Appliances = [
   'Toaster',
   'mixer',
   'Microwave',
@@ -12,29 +12,28 @@ const kitchenAppliancesList = [
   'Kettle'
 ];
 
-const hasSpecificAppliance = kitchenAppliancesList.includes('Toaster');
+const hasToaster = AppliancesList.includes('Toaster');
 
 // TASK 4:
-function getReversedArray(targetArray) {
+function reverse(targetArray) {
     targetArray.reverse();
 }
 
-getReversedArray(filteredNumbersSequence);
-getReversedArray(kitchenAppliancesList);
-
+ReversedArray(filtered);
+ReversedArray(Appliances);
 
 // TASK 7:
-const dotComComments = socialMediaComments.filter(comment => comment.email.includes('.com'));
-console.log('TASK 7 (.com comments):', dotComComments); 
+const ComComments = socialMediaComments.filter(comment => comment.email.includes('.com'));
+console.log('TASK 7 (.com comments):', ComComments); 
 
 // TASK 8 (updated postId):
-const updatedPostIdComments = socialMediaComments.map(comment => {
+const updatedComments = socialMediaComments.map(comment => {
   return {
     ...comment,
     postId: comment.id <= 5 ? 2 : 1
   };
 });
-console.log('TASK 8 (updated postId):', updatedPostIdComments);
+console.log('TASK 8 (updated postId):', updatedComments);
 
 // TASK 9
 const simplifiedComments = socialMediaComments.map(comment => {
