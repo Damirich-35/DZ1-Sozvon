@@ -77,7 +77,8 @@ fugit ut id laudantium enim quasi est`
     email: "Meghan_Littel@rene.us",
     body: `sapiente assumenda molestiae atque
 adipisci laborum distinctio aperiam et transient
-quia eos rerum aut quia sunt\nut autem est facilis expedita`
+quia eos rerum aut quia sunt
+ut autem est facilis expedita`
   },
   {
     postId: 2,
@@ -93,9 +94,9 @@ omnis inventore architecto omnis sint unde`
 
 console.log('Задание 2 (Список товаров):', productsList);
 
-// ЗАДАНИЕ 3: Шаблон (функция) для создания HTML-разметки карточки товара
+// Задание 3: Шаблон для создания HTML-разметки карточки товара
 function createProductCardTemplate(product) {
-  const ingredientsString = product.ingredients.join(',');
+  const ingredientsString = product.ingredients.join(', ');
   return `
     <div class="product-card" data-id="${product.id}">
       <img src="${product.image}" alt="${product.title}" class="product-image">
@@ -109,9 +110,9 @@ function createProductCardTemplate(product) {
       </div>
     </div>
   `;
-} 
+}
 
-// ЗАДАНИЕ 4: Группировка (reduce())
+// Задание 4: Группировка (reduce())
 const productsMap = productsList.reduce((accumulator, product) => {
   accumulator[product.id] = {
     price: product.price,
@@ -121,19 +122,23 @@ const productsMap = productsList.reduce((accumulator, product) => {
 }, {});
 console.log('Задание 4 (Объект продуктов):', productsMap);
 
-// ФУНКЦИЯ 1: Только запрашивает число у пользователя, проверяет его и возвращает
+// Функция получения количества карточек от пользователя
 function getCountFromUser() {
   const userInput = prompt("Сколько карточек отобразить? От 1 до 5");
-  const count = parseInt(userInput);
+  if (userInput === null) {
+    return null;
+  }
+
+  const count = parseInt(userInput, 10);
 
   if (isNaN(count) || count < 1 || count > 5) {
     alert("Ошибка! Допускаются только числа от 1 до 5.");
-    return null; 
+    return null;
   }
-  return count; 
+  return count;
 }
 
-// ФУНКЦИЯ 2: Только рендерит карточки на страницу, принимая массив аргументом
+// Функция рендеринга карточек на страницу
 function renderProductCards(productsArray) {
   const container = document.querySelector('.products-container');
   if (!container) {
@@ -143,19 +148,15 @@ function renderProductCards(productsArray) {
   container.innerHTML = '';
 
   productsArray.forEach(product => {
-    const cardHtml = createProductCardTemplate(product); // Используем шаблон из Задания 3
+    const cardHtml = createProductCardTemplate(product);
     container.innerHTML += cardHtml;
   });
 }
 
-// === ТОЧКА ЗАПУСКА КОДА ===
-// 1. Получаем проверенное число от пользователя
+// === Точка запуска кода ===
 const numberOfCards = getCountFromUser();
 
-// 2. Если число успешно получено (не null), рендерим нужную часть массива
 if (numberOfCards !== null) {
   const productsToRender = productsList.slice(0, numberOfCards);
-
-  // Передаём этот кусочек массива аргументом в функцию рендеринга
   renderProductCards(productsToRender);
 }
