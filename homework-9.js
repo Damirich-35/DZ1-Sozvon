@@ -1,4 +1,4 @@
-import { socialMediaComments } from './comments.js'; 
+import { socialMediaComments } from './comments.js';
 // TASK 2: Filter array of numbers starting from 5
 const Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const filtered = Numbers.filter(number => number >= 5);
@@ -16,7 +16,7 @@ const hasToaster = AppliancesList.includes('Toaster');
 
 // TASK 4:
 function reverse(targetArray) {
-    targetArray.reverse();
+  targetArray.reverse();
 }
 
 ReversedArray(filtered);
@@ -24,7 +24,7 @@ ReversedArray(Appliances);
 
 // TASK 7:
 const ComComments = socialMediaComments.filter(comment => comment.email.includes('.com'));
-console.log('TASK 7 (.com comments):', ComComments); 
+console.log('TASK 7 (.com comments):', ComComments);
 
 // TASK 8 (updated postId):
 const updatedComments = socialMediaComments.map(comment => {
