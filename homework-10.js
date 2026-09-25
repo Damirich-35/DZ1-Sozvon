@@ -50,7 +50,7 @@ function renderProductCards(productsArray) {
     cardRoot.dataset.id = product.id;
 
     const img = cardClone.querySelector('.product-card__image');
-    img.src = product.image;
+    img.src = `./img/${product.image}.jpg`;
     img.alt = product.title;
 
     cardClone.querySelector('.product-card__category').textContent    = product.category;

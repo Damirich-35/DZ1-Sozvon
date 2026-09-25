@@ -6,7 +6,7 @@ export const productsList = [
     description: "Интенсивно очищает, не повреждает защитный барьер кожи.",
     price: 1650,
     ingredients: ["минералы", "витамины С, А, PP, B и E", "солнцезащитные компоненты"],
-    image: "img/fase-wash-gel.jpg"
+    image: "fase-wash-gel"
   },
   {
     id: 2,
