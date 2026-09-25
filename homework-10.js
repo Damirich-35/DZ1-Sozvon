@@ -1,5 +1,4 @@
 import { productsList } from './products.js';
-
 console.log('Задание 2 (Список товаров):', productsList);
 
 /* ---------- Задание 4: reduce → массив объектов ---------- */
@@ -14,25 +13,25 @@ const productsWithDescriptions = productsList.reduce((accumulator, product) => {
 console.log('Задание 4 (Массив объектов Название-Описание):', productsWithDescriptions);
 
 /* ---------- Задание 5 (Часть 1): запрос количества ---------- */
-function getCountFromUser() {
-  const MIN = 1;
-  const MAX = 5;
+function askUserCount() {
+  const minCount = 1;
+  const maxCount = 5;
 
   while (true) {
-    const userInput = prompt(`Сколько карточек отобразить? От ${MIN} до ${MAX}`);
+    const userInput = prompt(`Сколько карточек отобразить? От ${minCount} до ${maxCount}`);
 
-    if (userInput === null) return MIN;
+    if (userInput === null) return minCount;
 
     const count = Number(userInput.trim());
-    if (Number.isInteger(count) && count >= MIN && count <= MAX) {
+    if (Number.isInteger(count) && count >= minCount && count <= maxCount) {
       return count;
     }
-    alert(`Ошибка! Допускаются только числа от ${MIN} до ${MAX}.`);
+    alert(`Ошибка! Допускаются только числа от ${minCount} до ${maxCount}.`);
   }
 }
 
 /* ---------- Задание 3 и 5 (Часть 2): рендеринг карточек ---------- */
-function renderProductCards(productsArray) {
+function renderProductCards(products) {
   const container = document.querySelector('.products-container');
   const template  = document.querySelector('#product-card-template');
 
@@ -43,7 +42,7 @@ function renderProductCards(productsArray) {
 
   container.innerHTML = '';
 
-  productsArray.forEach(product => {
+  products.forEach(product => {
     const cardClone = template.content.cloneNode(true);
 
     const cardRoot = cardClone.querySelector('.product-card');
@@ -71,5 +70,5 @@ function renderProductCards(productsArray) {
   });
 }
 
-const numberOfCards = getCountFromUser();
-renderProductCards(productsList.slice(0, numberOfCards));
+const cardCount = askUserCount();
+renderProductCards(productsList.slice(0, cardCount));

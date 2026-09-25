@@ -15,7 +15,7 @@ export const productsList = [
     description: "Способствует удерживанию влаги в верхних слоях кожи.",
     price: 3500,
     ingredients: ["воски", "минералы", "масла"],
-    image: "img/mask.jpg"
+    image: "mask"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const productsList = [
     description: "Набор, состоящий из увлажняющего крема и маски.",
     price: 4750,
     ingredients: ["воски", "минералы", "масла"],
-    image: "img/set-1.jpg"
+    image: "set-1"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const productsList = [
     description: "Весь набор средств Invisible symphony: крем, маска, мусс и гель для умывания.",
     price: 7520,
     ingredients: ["воски", "минералы", "масла"],
-    image: "img/set-5.jpg"
+    image: "set-5"
   },
   {
     id: 5,
@@ -42,6 +42,6 @@ export const productsList = [
     description: "Освежает, тонизирует и выравнивает pH-баланс кожи.",
     price: 2100,
     ingredients: ["минералы", "экстракты трав"],
-    image: "img/mask.jpg"
+    image: "mask"
   }
 ];
