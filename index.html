@@ -14,10 +14,10 @@
   <h1>Выбери свой продукт</h1>
   <button class="toggle-btn">Поменять цвет кнопки</button>
 
-  <!-- Пустой контейнер — карточки рендерятся из JS -->
+  <button class="btn-register" id="openModalBtn">Регистрация</button>
+
   <div class="products-container"></div>
 
-  <!-- Шаблон карточки — структура 1-в-1 как в реальной вёрстке -->
   <template id="product-card-template">
     <article class="product-card" data-id="">
       <div class="product-card__image-wrapper">
@@ -39,6 +39,92 @@
     </article>
   </template>
 
+  <footer>
+    <div class="footer-container">
+      <nav aria-label="Навигация по сайту">
+        <h3>Навигация</h3>
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <section aria-label="Контактная информация">
+        <h3>Контакты</h3>
+        <address>
+          г. Октябрьский, ул. Ленина, д. 1<br>
+          Телефон: <a href="tel:+79991234567">+7 (999) 1234567</a><br>
+          Email: <a href="mailto:www.dmr777@gmail.com">www.dmr777@gmail.com</a>
+        </address>
+      </section>
+      <section aria-label="Подписка на новости">
+        <h3>Подписка</h3>
+        <form class="subscribe-form" id="subscribeForm" novalidate>
+          <label for="subscriberEmail">Электронная почта</label>
+          <input
+            type="email"
+            id="subscriberEmail"
+            name="email"
+            placeholder="you@example.com"
+            required
+          >
+          <button type="submit">Подписаться</button>
+        </form>
+      </section>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Example. Все права защищены.
+    </div>
+  </footer>
+
+  <div class="modal" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__overlay" data-close-modal></div>
+
+    <div class="modal__content">
+      <button class="modal__close" type="button" aria-label="Закрыть" data-close-modal>&times;</button>
+
+      <h2 id="modalTitle">Регистрация</h2>
+
+      <form class="register-form" id="registerForm" novalidate>
+        <div class="form-field">
+          <label for="firstName">Имя</label>
+          <input type="text" id="firstName" name="firstName" placeholder="Введите имя" required minlength="2">
+        </div>
+
+        <div class="form-field">
+          <label for="lastName">Фамилия</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Введите фамилию" required minlength="2">
+        </div>
+
+        <div class="form-field">
+          <label for="birthDate">Дата рождения</label>
+          <input type="date" id="birthDate" name="birthDate" required>
+        </div>
+
+        <div class="form-field">
+          <label for="login">Логин</label>
+          <input type="text" id="login" name="login" placeholder="Придумайте логин" required minlength="4">
+        </div>
+
+        <div class="form-field">
+          <label for="password">Пароль</label>
+          <input type="password" id="password" name="password" placeholder="Минимум 6 символов" required minlength="6">
+        </div>
+
+        <div class="form-field">
+          <label for="passwordRepeat">Повторение пароля</label>
+          <input type="password" id="passwordRepeat" name="passwordRepeat" placeholder="Повторите пароль" required minlength="6">
+        </div>
+
+        <p class="form-error" id="formError">Пароли не совпадают или форма заполнена неверно.</p>
+
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
   <script type="module" src="homework-10.js"></script>
+  <script type="module" src="modal.js"></script>
 </body>
-</html>
