@@ -72,3 +72,11 @@ function renderProductCards(products) {
 
 const cardCount = askUserCount();
 renderProductCards(productsList.slice(0, cardCount));
+/* ============================================================
+   Кнопка «Поменять цвет кнопки» — переключение активного класса
+   ============================================================ */
+const toggleButton = document.querySelector('.toggle-btn');
+
+toggleButton.addEventListener('click', () => {
+  toggleButton.classList.toggle('toggle-btn--active');
+});
