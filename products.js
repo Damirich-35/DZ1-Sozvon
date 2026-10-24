@@ -6,7 +6,7 @@ export const productsList = [
     description: "Интенсивно очищает, не повреждает защитный барьер кожи.",
     price: 1650,
     ingredients: ["минералы", "витамины С, А, PP, B и E", "солнцезащитные компоненты"],
-    image: "fase-wash-gel"
+    image: "./img/fase-wash-gel.jpg"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const productsList = [
     description: "Способствует удерживанию влаги в верхних слоях кожи.",
     price: 3500,
     ingredients: ["воски", "минералы", "масла"],
-    image: "mask"
+    image: "./img/mask.jpg"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const productsList = [
     description: "Набор, состоящий из увлажняющего крема и маски.",
     price: 4750,
     ingredients: ["воски", "минералы", "масла"],
-    image: "set-1"
+    image: "./img/set-1.jpg"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const productsList = [
     description: "Весь набор средств Invisible symphony: крем, маска, мусс и гель для умывания.",
     price: 7520,
     ingredients: ["воски", "минералы", "масла"],
-    image: "set-5"
+    image: "./img/set-5.jpg"
   },
   {
     id: 5,
@@ -42,6 +42,6 @@ export const productsList = [
     description: "Освежает, тонизирует и выравнивает pH-баланс кожи.",
     price: 2100,
     ingredients: ["минералы", "экстракты трав"],
-    image: "mask"
+    image: "./img/mask.jpg"
   }
 ];
