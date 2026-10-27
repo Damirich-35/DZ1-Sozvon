@@ -19,8 +19,7 @@
   color: #ffffff;
 }
 
-/* Кнопка "Регистрация" — в стиле .toggle-btn */
-
+/* Кнопка "Регистрация" — в стиле toggle-btn */
 .btn-register {
   padding: 12px 24px;
   font-family: 'Montserrat', sans-serif;
